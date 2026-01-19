@@ -1,6 +1,6 @@
 # Hi there — I’m **Pranav Holla**
 
-## ⌘ Full-Stack GenAI Developer | MERN | Next.js | Data | Figma
+## Full-Stack GenAI Developer | MERN | Next.js | AI | Figma
 
 I am a **Full-Stack GenAI Developer** specializing in the **MERN stack**, with over **2 years of experience in data analytics and data engineering**. I build scalable, high-performance, and intelligent web applications that blend strong engineering with data-driven and AI-powered capabilities.
 

@@ -1,14 +1,14 @@
-# Hi there, I’m **Dexter** 👋
+# Hi there — I’m **Dexter**
 
-## 🚀 Full-Stack Developer | MERN | Next.js | Data & AI
+## ⌘ Full-Stack GenAI Developer | MERN | Next.js | Data
 
-I am a Full-Stack Developer specializing in the **MERN stack**, with over **2 years of experience in data analytics and data engineering**. I build scalable, high-performance, and intelligent web applications that combine solid engineering with data-driven insights.
+I am a **Full-Stack GenAI Developer** specializing in the **MERN stack**, with over **2 years of experience in data analytics and data engineering**. I build scalable, high-performance, and intelligent web applications that blend strong engineering with data-driven and AI-powered capabilities.
 
-I enjoy transforming complex requirements into clean, reliable, and production-ready systems — from responsive frontend experiences to well-architected backends and optimized data workflows. I am particularly interested in **GenAI-powered applications**, where automation and intelligence enhance real-world usability.
+I focus on transforming complex requirements into clean, reliable, and production-ready systems — from responsive frontend experiences to well-architected backends, intelligent workflows, and optimized data pipelines. My core interest lies in **GenAI-powered applications**, where automation and intelligence meaningfully enhance real-world usability.
 
 ---
 
-## 💡 What I Work On
+## ◼ What I Work On
 
 - **Full-Stack Development:** MERN, Next.js, TypeScript  
 - **Scalable Web Applications & SaaS Products**  
@@ -18,7 +18,7 @@ I enjoy transforming complex requirements into clean, reliable, and production-r
 
 ---
 
-## 🎯 What Drives Me
+## ▸ What Drives Me
 
 - Building impactful, real-world solutions  
 - Combining engineering discipline with creative problem-solving  
@@ -28,7 +28,7 @@ I enjoy transforming complex requirements into clean, reliable, and production-r
 
 ---
 
-## 📦 On This GitHub
+## ◆ On This GitHub
 
 You’ll find a growing collection of projects across:
 
@@ -41,6 +41,6 @@ I am always building, refining, and exploring — with a strong focus on creatin
 
 ---
 
-## 📫 Connect With Me
+## ▢ Connect With Me
 
 Feel free to reach out or explore my work — collaboration and knowledge-sharing are always welcome.

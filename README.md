@@ -1,4 +1,4 @@
-# Hi there — I’m **Dexter**
+# Hi there — I’m **Pranav Holla**
 
 ## ⌘ Full-Stack GenAI Developer | MERN | Next.js | Data
 

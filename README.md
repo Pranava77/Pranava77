@@ -94,8 +94,7 @@ Feel free to reach out or explore my work — collaboration and knowledge-sharin
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
 ![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)
 
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=pranava77&theme=merko&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
+username=pranava77&theme=merko&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
 
 
 

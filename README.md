@@ -1,52 +1,28 @@
 # Pranava Holla
 
-**Full-Stack AI Engineer** — I build production web applications with AI systems inside them, not bolted on top.
+Full-stack AI engineer. Bangalore, India — [WEBFIXUS](https://webfixus.com) — [pranavarholla@gmail.com](mailto:pranavarholla@gmail.com)
 
-Bangalore, India · [WEBFIXUS](https://webfixus.com) · [pranavarholla@gmail.com](mailto:pranavarholla@gmail.com)
-
----
-
-## What I do
-
-I work across the whole line: the model layer, the API that serves it, and the interface people actually touch.
-
-- **AI systems** — LLM-backed applications, retrieval, and agentic workflows. Model-agnostic by default, behind an adapter, so swapping a provider doesn't mean a rewrite.
-- **Full-stack product** — React and Next.js on the front; Express and FastAPI services behind; MongoDB, Postgres and SQLite underneath.
-- **Backends that hold up** — JWT auth, request validation, rate limiting, scheduled jobs. The unglamorous parts decide whether a thing survives contact with users.
-- **Data groundwork** — 2+ years in analytics and data engineering, which is mostly why I care about pipelines being boring and reproducible.
-- **Design to code** — I work from Figma directly and hold the build to the design rather than approximating it.
+I build systems where the model is load-bearing. Most of my attention goes to the boundaries: what the system is permitted to do, what it refuses, and how it behaves when the model is wrong, slow, or absent entirely.
 
 ---
 
-## Selected work
+### Rudra OS
+`Python 3.12 · FastAPI · SQLite · Pydantic` — private for now
 
-| Project | What it is | Stack |
-|---|---|---|
-| **Rudra OS** | A local-first personal operating system. Goals, tasks, commitments, decisions and memory in one SQLite file on your own machine, answering *"what matters right now, and why?"*. Model-agnostic through an OpenAI-compatible adapter — and the deterministic half runs with no model configured at all. Deliberately cannot send messages on your behalf. | Python 3.12, FastAPI, SQLite, Pydantic, Typer |
-| **Syncner** | Learning management platform. Structured learning paths, progress tracking, generated student portfolios, and a Gemini-backed AI career mentor, across separate student, staff and admin surfaces. Express API with JWT auth, request validation, rate limiting and scheduled jobs. | React, TypeScript, Redux, Express, MongoDB, Gemini |
-| **Techswamy** | Freelance product site, built and shipped end to end. | Next.js, TypeScript |
-| **WEBFIXUS** | Agency site — [webfixus-final.vercel.app](https://webfixus-final.vercel.app) | JavaScript, GSAP |
+A local-first personal operating system. Goals, commitments, decisions and memory live in one SQLite file on your own machine, and the system answers a single question: what matters right now, and why.
 
----
+Two decisions shape it. Models are reached through an OpenAI-compatible adapter, so the provider is swappable and the deterministic half runs with no model configured at all. And it cannot send a message on your behalf — not because that was hard, but because an assistant that can speak as you is a different product with a different risk, and this one declines to be it.
 
-## Stack
+### [Syncner](https://github.com/Pranava77/syncner-test)
+`React · TypeScript · Express · MongoDB · Gemini`
 
-**Languages** · TypeScript, JavaScript, Python, SQL
+A learning platform with a Gemini-backed career mentor. The interesting half is the API: JWT auth, request validation, rate limiting and scheduled jobs, with the model key resolved from admin settings and falling back to the environment — so rotating a key is a settings change, not a redeploy.
 
-**AI** · LLM application development, RAG, agent workflows, provider-agnostic adapters (OpenAI-compatible, Gemini)
+### [WEBFIXUS](https://webfixus-final.vercel.app)
+`JavaScript · GSAP`
 
-**Frontend** · React, Next.js, Vite, Tailwind, Redux, GSAP
-
-**Backend** · Node, Express, FastAPI, REST, JWT, Pydantic
-
-**Data** · MongoDB, PostgreSQL, SQLite, pandas, NumPy
-
-**Tooling** · Git, Vercel, Figma
+My studio. Client web work, shipped end to end — [Techswamy](https://github.com/Pranava77/techswamy), [Digital Mudrana](https://github.com/Pranava77/Digital-Mudrana), and Shopify storefronts.
 
 ---
 
-## Currently
-
-Building **Rudra OS**, and taking on full-stack and AI engineering work through [WEBFIXUS](https://webfixus.com).
-
-Open to interesting problems — reach me at [pranavarholla@gmail.com](mailto:pranavarholla@gmail.com).
+Before web, I worked in analytics: [credit risk](https://github.com/Pranava77/Banking-credit-risk-analytics), [customer segmentation](https://github.com/Pranava77/Customer-Segmentation-for-one-of-the-leading-credit-card-company), and [spend drivers](https://github.com/Pranava77/Credit-Card-Spend-Identifying-the-key-drivers-of-card-spend-). It's why I'd rather a pipeline be boring than clever.

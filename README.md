@@ -8,15 +8,17 @@ I build systems where the model is load-bearing, and spend most of my time on th
 
 ### [Syncner](https://github.com/Pranava77/syncner-test) — a learning platform with a Gemini-backed mentor
 
-`React · TypeScript · Express · MongoDB`
+`React · TypeScript · Redux · Express · MongoDB`
+
+Structured learning paths, progress tracking and generated student portfolios, across separate student, staff and admin surfaces.
 
 The interesting half is the API: JWT auth, request validation, rate limiting, scheduled jobs. The model key resolves from admin settings before falling back to the environment, so rotating a key is a settings change rather than a redeploy.
 
 ### Rudra OS — a local-first personal operating system
 
-`Python · FastAPI · SQLite · Pydantic` · private
+`Python · FastAPI · SQLite · Pydantic` · private repo
 
-Goals, commitments, decisions and memory in one SQLite file on your own machine, answering one question: what matters right now, and why.
+Goals, commitments, decisions and memory in one SQLite file on your own machine, reachable from a terminal, a browser or an editor, answering one question: what matters right now, and why.
 
 Models sit behind an OpenAI-compatible adapter, so the provider is swappable and the deterministic half runs with no model configured at all. It cannot send a message on your behalf — not because that was hard, but because an assistant that can speak as you is a different product with a different risk.
 

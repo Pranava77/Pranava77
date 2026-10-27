@@ -47,40 +47,19 @@ code:     Python · TypeScript · Swift
 </tr>
 </table>
 
-### Flagship work
+## Project showcase
 
-| Project | Stack | What it is |
-|:---|:---|:---|
-| [**Rudra OS**](https://github.com/Pranava77/rudra-os) | Python, FastAPI, SQLite, MCP | Local-first personal OS with a bounded agent runtime and approvals tied to exact arguments |
-| [**SilverSync**](https://github.com/Pranava77/SilverSync) | FastAPI, React, Gemini, ChromaDB | Care-home operations app whose 18-tool agent can only propose changes for a person to confirm |
-| [**Xotch**](https://github.com/Pranava77/Xotch) | Swift 6, SwiftUI | AI in the MacBook notch that acts on your day only after you click Allow, plus on-device dictation |
-| [**Syncner**](https://github.com/Pranava77/syncner-test) | React, Express, MongoDB, Gemini | Learning platform with a Gemini career mentor |
-| [**Multi-Agent Planning**](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio) | Python, FastAPI | Supervisor agents, DAG task decomposition and replanning, with no model involved |
-| [**Advanced RAG**](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project) | FAISS, BM25, cross-encoders | Hybrid retrieval with query rewriting and re-ranking, traced stage by stage |
-
----
-
-## How I build agents
-
-The same rules show up in every project, so here they are once, with where each one lives.
-
-1. **Permission is part of the tool's type, not a prompt instruction.** In Xotch every tool is `look`, `share` or `change`, and only `look` runs without an Allow card. In SilverSync the three tools that change data can't write at all; they create a pending action.
-2. **The loop belongs to me, not the SDK.** SilverSync runs its own tool loop instead of automatic function calling, so permission checks, streaming, auditing and confirmation stay in code I can read. Xotch caps the loop at five rounds and offers no tools on the last one, so the model has to answer.
-3. **Approvals are bound to exact arguments.** In Rudra OS, an approval covers that one call with those arguments and nothing else, and you can give it from any surface, including a phone.
-4. **Deterministic first, model last.** Briefings, priorities, alerts and calculations run with no model call. A model gets only the step that actually needs judgement, and each product works with no key configured.
-5. **Remove a capability rather than guard it.** Rudra OS can't send a message on your behalf, and its `run_code` tool was deleted rather than gated: the agent writes the file it would ask to run, so "may I run this?" isn't a question you can usefully answer.
-6. **Untrusted input is marked, not trusted.** Fetched content is stored `UNVERIFIED` and reaches the model inside a quotation fence, with instruction-shaped spans stripped and counted.
-7. **The provider is swappable.** Rudra OS, SilverSync and Xotch each talk to models through their own provider-neutral types or adapters, so changing models is configuration, not a rewrite.
-
----
-
-## Featured work
+Click a project to read how it works.
 
 ### [Rudra OS](https://github.com/Pranava77/rudra-os): a local-first personal OS with a bounded agent runtime
 
 `Python 3.12` · `FastAPI` · `SQLite + FTS5` · `Pydantic` · `MCP` · `TypeScript` · MIT
 
 Goals, tasks, commitments, decisions, ideas, reading and memory in **one SQLite file on your own machine**, built to answer one question well: *given everything relevant about me, what matters right now, why, and what should I do next?*
+
+<details>
+<summary><b>How it works</b></summary>
+<br>
 
 ```
 $ rudra today
@@ -106,15 +85,23 @@ Today — 110 of 240 minutes
 
 **Scale:** about 39,700 lines of Python and 5,300 of TypeScript, 67 tables, 21 reversible migrations, 11 automations, checked with `ruff`, `mypy --strict` and eleven architectural invariants. Its [AS_BUILT record](https://github.com/Pranava77/rudra-os/blob/main/docs/AS_BUILT.md) lists what isn't built as plainly as what is.
 
+</details>
+
 ---
 
 ### [SilverSync](https://github.com/Pranava77/SilverSync): a care-home operations app with a human-in-the-loop agent
 
 `React 18` · `TypeScript` · `FastAPI` · `SQLAlchemy 2` · `Gemini` · `ChromaDB`
 
+Staff see residents, medication, billing, staff and documents in one place, with an assistant that reads the home's own records and drafts changes for a person to confirm.
+
+<details>
+<summary><b>How it works</b> (screenshot and agent diagram inside)</summary>
+<br>
+
 <img src="https://raw.githubusercontent.com/Pranava77/SilverSync/main/docs/screenshots/dashboard.png" alt="SilverSync's dashboard: the care home drawn as two floors of coloured resident doors" width="100%">
 
-Staff see residents, medication, billing, staff and documents in one place. Dementia-friendly homes paint each resident's door its own colour, so the dashboard draws the home as corridors of those doors.
+Dementia-friendly care homes paint each resident's door its own colour, so the dashboard draws the home as corridors of those doors.
 
 **The agent**
 - A Gemini agent with **18 tools** across retrieval, residents, medical, accounting, HR, documents and reports.
@@ -140,15 +127,21 @@ sequenceDiagram
 
 **Around it:** semantic search over records and uploaded documents (ChromaDB), document review that suggests a category, resident and summary (and drops any resident that isn't real), and report drafts. Refill and overdue-invoice alerts are deterministic, with no AI involved. Admins can rotate the API key without a restart, and saved keys are stored encrypted. Without a key, everything except the AI still works. Tested with 49 tests against a scripted fake LLM, so no API key is needed.
 
+</details>
+
 ---
 
 ### [Xotch](https://github.com/Pranava77/Xotch): an AI in the MacBook notch that acts only after you click Allow
 
 `Swift 6` · `SwiftUI` · `AppKit` · on-device speech · private beta
 
-<img src="https://raw.githubusercontent.com/Pranava77/Xotch/main/docs/images/hero.jpg" alt="Xotch open at the top of a Mac screen, showing the song playing, the next meeting, a focus timer, to-dos and Claude Code status" width="100%">
-
 A native macOS app that turns the notch, or a drawn one on any display, into a control surface for the things you do fifty times a day.
+
+<details>
+<summary><b>How it works</b> (screenshot inside)</summary>
+<br>
+
+<img src="https://raw.githubusercontent.com/Pranava77/Xotch/main/docs/images/hero.jpg" alt="Xotch open at the top of a Mac screen, showing the song playing, the next meeting, a focus timer, to-dos and Claude Code status" width="100%">
 
 **The agent**
 - Chat with Claude, GPT, Gemini or a local model through Ollama or LM Studio, from any app with <kbd>⌘⇧Space</kbd>.
@@ -160,13 +153,82 @@ A native macOS app that turns the notch, or a drawn one on any display, into a c
 
 **Built small:** about 23,500 lines of Swift 6 with strict concurrency and no third-party Swift packages. A closed notch measures about 0.3% CPU and 29 MB of memory, with every number in the docs measured, not estimated. It has no account, analytics or telemetry, and API keys live in the Keychain. Start with its [engineering notes](https://github.com/Pranava77/Xotch/blob/main/docs/ENGINEERING.md).
 
+</details>
+
 ---
 
 ### [Syncner](https://github.com/Pranava77/syncner-test): a learning platform with a Gemini career mentor
 
 `React` · `TypeScript` · `Redux` · `Express` · `MongoDB`
 
-Structured learning paths, progress tracking and generated student portfolios, across separate student, staff and admin surfaces. The interesting half is the API: JWT auth, request validation, rate limiting and scheduled jobs. The model key is read from admin settings before the environment, so rotating a key is a settings change rather than a redeploy.
+Structured learning paths, progress tracking and generated student portfolios, across separate student, staff and admin surfaces.
+
+<details>
+<summary><b>How it works</b></summary>
+<br>
+
+- **The mentor:** a Gemini-backed career mentor that students talk to alongside their learning paths.
+- **The API:** Express and MongoDB, with JWT auth, request validation, rate limiting and scheduled jobs.
+- **Key handling:** the model key is read from admin settings before the environment, so rotating a key is a settings change rather than a redeploy.
+- **Front end:** React and TypeScript with Redux, with separate student, staff and admin surfaces.
+
+</details>
+
+---
+
+### [Multi-Agent Planning Studio](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio): orchestration, shown without a model
+
+`Python` · `FastAPI` · `SQLite`
+
+A lab that makes multi-agent orchestration visible: a supervisor breaks a request into a task graph, specialist agents work through it, and a reviewer argues with the result.
+
+<details>
+<summary><b>How it works</b></summary>
+<br>
+
+- **Supervisor ("Orchestrator-Prime")** decomposes a query into a DAG of subtasks, dispatches them in dependency order, and writes the final report.
+- **Specialist roles:** a data / SQL agent working over a small enterprise SQLite database, a quantitative analyst, and a critical reviewer that fact-checks the others adversarially.
+- **Two orchestration patterns:** supervisor / hierarchical, and a sequential assembly pipeline, with agents sharing a blackboard memory.
+- **Replanning:** when a step fails, the plan is revised and the run recovers instead of stopping.
+- **Honest about what it is:** the agents are plain Python classes and no LLM is called, so what you see is the orchestration itself. There's a web UI and a CLI demo.
+
+</details>
+
+---
+
+### [Advanced RAG Studio](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project): retrieval an agent can rely on
+
+`Python` · `FastAPI` · `FAISS` · `BM25` · `sentence-transformers`
+
+A lab for the retrieval half of an agent: rewrite the query, search two ways, re-rank, and answer only from what was found, with a trace of every stage.
+
+<details>
+<summary><b>How it works</b></summary>
+<br>
+
+1. **Query transformation:** multi-query expansion into three phrasings, a HyDE synthetic passage, and sub-query decomposition.
+2. **Hybrid retrieval:** FAISS dense search over 384-dimensional embeddings plus BM25 keyword search, fused with reciprocal rank fusion (k = 60).
+3. **Re-ranking:** an MS MARCO cross-encoder re-scores the candidates, and the UI shows how far each one moved.
+4. **Grounded answers:** each answer cites its sources as `[Source N]`, with a side-by-side view of what an ungrounded answer gets wrong.
+5. **Evaluation:** RAG-triad scoring and a naive-vs-advanced benchmark.
+
+You can upload your own `.md` or `.txt` files and they're re-indexed immediately. Retrieval and re-ranking use real models; the answer step is templated per domain rather than an LLM, so the retrieval quality is what's on show.
+
+</details>
+
+---
+
+## How I build agents
+
+The same rules show up in every project, so here they are once, with where each one lives.
+
+1. **Permission is part of the tool's type, not a prompt instruction.** In Xotch every tool is `look`, `share` or `change`, and only `look` runs without an Allow card. In SilverSync the three tools that change data can't write at all; they create a pending action.
+2. **The loop belongs to me, not the SDK.** SilverSync runs its own tool loop instead of automatic function calling, so permission checks, streaming, auditing and confirmation stay in code I can read. Xotch caps the loop at five rounds and offers no tools on the last one, so the model has to answer.
+3. **Approvals are bound to exact arguments.** In Rudra OS, an approval covers that one call with those arguments and nothing else, and you can give it from any surface, including a phone.
+4. **Deterministic first, model last.** Briefings, priorities, alerts and calculations run with no model call. A model gets only the step that actually needs judgement, and each product works with no key configured.
+5. **Remove a capability rather than guard it.** Rudra OS can't send a message on your behalf, and its `run_code` tool was deleted rather than gated: the agent writes the file it would ask to run, so "may I run this?" isn't a question you can usefully answer.
+6. **Untrusted input is marked, not trusted.** Fetched content is stored `UNVERIFIED` and reaches the model inside a quotation fence, with instruction-shaped spans stripped and counted.
+7. **The provider is swappable.** Rudra OS, SilverSync and Xotch each talk to models through their own provider-neutral types or adapters, so changing models is configuration, not a rewrite.
 
 ---
 
@@ -213,8 +275,6 @@ Labs I built to understand the pieces an agent stands on, rather than just calli
 
 | Lab | What's real in it |
 |---|---|
-| [Multi-Agent Planning](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio) | Supervisor and specialist roles, task decomposition into a DAG, replanning when a step fails, an adversarial fact-checker, shared blackboard memory. It runs without a model, so the orchestration itself is what you see. |
-| [Advanced RAG](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project) | HyDE and multi-query rewriting, FAISS dense + BM25 sparse retrieval fused with reciprocal rank fusion, cross-encoder re-ranking, cited answers, and a stage-by-stage trace of each query |
 | Prompt Studio | Prompt linting, few-shot and chain-of-thought comparisons, and a prompt-injection scanner |
 | Tokenizer Studio | BPE and WordPiece trained step by step; WordPiece, byte-level BPE, SentencePiece and tiktoken compared on the same text |
 | Embeddings · Transformer · AutoEncoder | GloVe written from scratch in NumPy beside Word2Vec and FastText, a transformer block traced op by op with tensor shapes, PyTorch autoencoders |

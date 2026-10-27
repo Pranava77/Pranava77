@@ -1,10 +1,62 @@
+<div align="center">
+
 # Pranava Holla
 
-**Agentic AI engineer** · Bangalore · [WEBFIXUS](https://webfixus.com) · [email](mailto:pranavarholla@gmail.com)
+### Agentic AI engineer
 
-I build agents that take real actions: they write records, move money, change calendars and run on people's own machines. Most of the work isn't the prompt. It's the boundary around the agent: which tools it gets, which calls need a person's approval, how many steps it may take, what it costs, and what still works when the model is wrong, slow, or missing.
+Bangalore, India · founder of [WEBFIXUS](https://webfixus.com)
 
-Three of those systems are below, along with the labs I built to understand what they stand on.
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pranavarholla@gmail.com)
+[![Website](https://img.shields.io/badge/webfixus.com-111111?style=for-the-badge&logo=googlechrome&logoColor=white)](https://webfixus.com)
+[![Location](https://img.shields.io/badge/Bangalore-10b981?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
+
+> *An agent is only as trustworthy as its boundary: the tools it gets, what needs a person's approval, and what still works when the model doesn't.*
+
+</div>
+
+---
+
+<table>
+<tr>
+<td width="58%" valign="top">
+
+### Who I am
+
+I build agents that take real actions: they write records, change calendars, draft reports and run on people's own machines. Most of the work isn't the prompt. It's the boundary around the agent: which tools it gets, which calls need a person's approval, how many steps it may take, what it costs, and what still works when the model is wrong, slow, or missing.
+
+Three of those systems are below, along with the labs I built to understand what they stand on. I also run WEBFIXUS, a small studio that ships client sites.
+
+</td>
+<td width="42%" valign="top">
+
+### At a glance
+
+```yaml
+role:     Agentic AI engineer
+based:    Bangalore, India
+building: Rudra OS · SilverSync · Xotch
+focus:    tool-using agents,
+          human-in-the-loop approvals,
+          local-first AI
+models:   Claude · Gemini · Ollama ·
+          OpenAI-compatible
+code:     Python · TypeScript · Swift
+```
+
+</td>
+</tr>
+</table>
+
+### Flagship work
+
+| Project | Stack | What it is |
+|:---|:---|:---|
+| [**Rudra OS**](https://github.com/Pranava77/rudra-os) | Python, FastAPI, SQLite, MCP | Local-first personal OS with a bounded agent runtime and approvals tied to exact arguments |
+| [**SilverSync**](https://github.com/Pranava77/SilverSync) | FastAPI, React, Gemini, ChromaDB | Care-home operations app whose 18-tool agent can only propose changes for a person to confirm |
+| [**Xotch**](https://github.com/Pranava77/Xotch) | Swift 6, SwiftUI | AI in the MacBook notch that acts on your day only after you click Allow, plus on-device dictation |
+| [**Syncner**](https://github.com/Pranava77/syncner-test) | React, Express, MongoDB, Gemini | Learning platform with a Gemini career mentor |
+| [**Multi-Agent Planning**](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio) | Python, FastAPI | Supervisor agents, DAG task decomposition and replanning, with no model involved |
+| [**Advanced RAG**](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project) | FAISS, BM25, cross-encoders | Hybrid retrieval with query rewriting and re-ranking, traced stage by stage |
 
 ---
 
@@ -131,6 +183,30 @@ Structured learning paths, progress tracking and generated student portfolios, a
 
 ---
 
+## Now building
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Xotch**
+- Developer ID signing and notarisation, so installs and updates take one click
+- Approving Claude Code's requests straight from the notch
+- Talking to the AI by voice, joining dictation and the assistant
+
+</td>
+<td width="50%" valign="top">
+
+**Rudra OS**, gaps its own docs list as not built yet
+- Feeding the pattern engine, so finished work becomes evidence for its hypotheses
+- A bundled transcriber: voice notes are captured today, but labelled as untranscribed
+
+</td>
+</tr>
+</table>
+
+---
+
 ## Under the hood
 
 Labs I built to understand the pieces an agent stands on, rather than just calling them. Each one says plainly which parts are real computation and which are simulated.
@@ -148,6 +224,10 @@ Labs I built to understand the pieces an agent stands on, rather than just calli
 
 ## Toolbox
 
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,ts,swift,fastapi,react,nextjs,tailwind,sqlite,mongodb,express,pytorch,sklearn&perline=12" alt="Python, TypeScript, Swift, FastAPI, React, Next.js, Tailwind, SQLite, MongoDB, Express, PyTorch, scikit-learn">
+</p>
+
 | | |
 |---|---|
 | **Agents & LLMs** | Tool calling, hand-written agent loops, human-in-the-loop approvals, MCP, streaming (SSE), structured output with Pydantic · Claude, Gemini, OpenAI-compatible APIs, Ollama, LM Studio |
@@ -164,4 +244,12 @@ I run **[WEBFIXUS](https://webfixus-final.vercel.app)**, a small studio that shi
 
 Before that I worked in analytics: [credit risk](https://github.com/Pranava77/Banking-credit-risk-analytics), [customer segmentation](https://github.com/Pranava77/Customer-Segmentation-for-one-of-the-leading-credit-card-company) and [spend drivers](https://github.com/Pranava77/Credit-Card-Spend-Identifying-the-key-drivers-of-card-spend-). It's why I'd rather a pipeline be boring than clever.
 
-**Get in touch:** [pranavarholla@gmail.com](mailto:pranavarholla@gmail.com)
+---
+
+<div align="center">
+
+**Building agents that need to be trusted? Let's talk.**
+
+[Email](mailto:pranavarholla@gmail.com) · [WEBFIXUS](https://webfixus.com) · [GitHub](https://github.com/Pranava77)
+
+</div>

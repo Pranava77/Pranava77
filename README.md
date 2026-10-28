@@ -286,13 +286,7 @@ Labs I built to understand the pieces an agent stands on, rather than just calli
 ## Toolbox
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,ts,swift,fastapi,react,nextjs,tailwind,sqlite,mongodb,express,pytorch,sklearn&perline=12" alt="Python, TypeScript, Swift, FastAPI, React, Next.js, Tailwind, SQLite, MongoDB, Express, PyTorch, scikit-learn">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain">
-  <img src="https://img.shields.io/badge/CrewAI-FF5A50?style=for-the-badge&logo=crewai&logoColor=white" alt="CrewAI">
-  <img src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white" alt="Pydantic">
+  <img src="https://go-skill-icons.vercel.app/api/icons?i=python,ts,swift,fastapi,react,nextjs,tailwind,sqlite,mongodb,express,pytorch,sklearn,langchain,crewai,pydantic&theme=dark&perline=15" alt="Python, TypeScript, Swift, FastAPI, React, Next.js, Tailwind, SQLite, MongoDB, Express, PyTorch, scikit-learn, LangChain, CrewAI, Pydantic">
 </p>
 
 | | |

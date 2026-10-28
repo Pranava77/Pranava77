@@ -35,7 +35,7 @@ Two of those systems are below in depth, with the rest, including the labs I bui
 ```yaml
 role:     Agentic AI engineer
 based:    Bangalore, India
-building: Rudra OS · SilverSync · Xotch
+building: SilverSync · Xotch
 focus:    tool-using agents,
           human-in-the-loop approvals,
           local-first AI
@@ -125,34 +125,9 @@ A native macOS app that turns the notch, or a drawn one on any display, into a c
 
 | Project | What it is | Stack |
 |---|---|---|
-| **Rudra OS** <sub>(private repo)</sub> | A local-first personal OS in one SQLite file, with a bounded agent runtime: 26 tools, every run capped in steps, time, calls and cost, and high-risk actions approved with their exact arguments. It can't send messages on your behalf. | Python, FastAPI, SQLite, Pydantic, MCP |
 | **[Syncner](https://github.com/Pranava77/syncner-test)** | A learning platform with a Gemini career mentor and separate student, staff and admin surfaces. | React, TypeScript, Redux, Express, MongoDB |
 | **[Multi-Agent Planning Studio](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio)** | A supervisor turns a request into a task graph for specialist agents and an adversarial reviewer, with replanning on failure. No LLM is called, so the orchestration itself is what's on show. | Python, FastAPI, SQLite |
 | **[Advanced RAG Studio](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project)** | Query rewriting, hybrid FAISS + BM25 retrieval, cross-encoder re-ranking and cited answers, with a trace of every stage. The answer step is templated, not an LLM. | Python, FastAPI, FAISS, BM25 |
-
----
-
-## Now building
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Xotch**
-- Developer ID signing and notarisation, so installs and updates take one click
-- Approving Claude Code's requests straight from the notch
-- Talking to the AI by voice, joining dictation and the assistant
-
-</td>
-<td width="50%" valign="top">
-
-**Rudra OS**, gaps its own docs list as not built yet
-- Feeding the pattern engine, so finished work becomes evidence for its hypotheses
-- A bundled transcriber: voice notes are captured today, but labelled as untranscribed
-
-</td>
-</tr>
-</table>
 
 ---
 

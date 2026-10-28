@@ -300,11 +300,55 @@ Labs I built to understand the pieces an agent stands on, rather than just calli
 
 ---
 
-## Also
+## WEBFIXUS
 
-I run **[WEBFIXUS](https://webfixus-final.vercel.app)**, a small studio that ships client sites end to end: animated GSAP builds, React / Vite sites like [Techswamy](https://github.com/Pranava77/techswamy) and [Digital Mudrana](https://github.com/Pranava77/Digital-Mudrana), [WordPress themes and plugins](https://github.com/Pranava77/wp-test) and [Shopify storefronts](https://github.com/Pranava77/shopify-reguru).
+I founded **[WEBFIXUS](https://webfixus.com)** in Bangalore in 2022. It's a small studio built on one idea: good digital work shouldn't need a 50-person agency. AI is how a small team keeps up, both inside our own workflow and in what we build for clients.
 
-Before that I worked in analytics: [credit risk](https://github.com/Pranava77/Banking-credit-risk-analytics), [customer segmentation](https://github.com/Pranava77/Customer-Segmentation-for-one-of-the-leading-credit-card-company) and [spend drivers](https://github.com/Pranava77/Credit-Card-Spend-Identifying-the-key-drivers-of-card-spend-). It's why I'd rather a pipeline be boring than clever.
+It's also where the agent work meets real clients. The habits in the showcase above (scoped tools, typed outputs, a human on anything that matters) are how we approach the AI integration work too.
+
+**What the studio does**
+
+| Service | What it covers |
+|---|---|
+| **Web design & development** | GSAP-animated, CMS-backed, performance-first sites, from marketing pages to full products |
+| **AI integration & automation** | LLM pipelines, AI chat, intelligent dashboards and workflow automation, used where they actually help |
+| **Branding & identity** | Logos, type systems, colour palettes, brand guidelines, motion identity |
+| **Marketing & growth** | SEO, content, paid campaigns, conversion work, analytics dashboards |
+| **Strategy & consulting** | Discovery, user research, information architecture, roadmapping |
+
+**Selected client work**
+
+| Client | What we built | Stack | Code |
+|---|---|---|---|
+| **Reguru** | Shopify storefront with Razorpay and Cashfree payments | Figma, Shopify, Liquid, JavaScript | [shopify-reguru](https://github.com/Pranava77/shopify-reguru) |
+| **Techswamy** | Next.js site with a Payload CMS backend, smooth-scroll motion and Calendly booking | Next.js, Tailwind, Payload CMS, GSAP, Lenis | [techswamy](https://github.com/Pranava77/techswamy) |
+| **Digital Mudrana** | Marketing site for a digital printing business | React, Vite, Tailwind, shadcn/ui | [repo](https://github.com/Pranava77/Digital-Mudrana) · [live](https://digital-mudrana.vercel.app) |
+| **BGS High** | Animated school website | WordPress, GSAP, JavaScript | private |
+| **BGS B-School** | Business school website | React, SCSS, Figma | private |
+| **BGS PU** | College website with motion | React, GSAP, Figma | private |
+
+Reusable [WordPress themes and plugins](https://github.com/Pranava77/wp-test) for client sites live in their own repo.
+
+<details>
+<summary><b>How a project runs</b></summary>
+<br>
+
+| Step | What happens |
+|---|---|
+| **1. Discover** | Audit, user flows, site map, personas, competitive research |
+| **2. Design** | Wireframes, UI kit, prototype, visual system, interaction design |
+| **3. Build** | Front end, CMS, GSAP motion, responsive pass, performance, AI features where they fit |
+| **4. Launch** | Performance audit, go-live, analytics, post-launch support, iteration |
+
+The studio's own site, [webfixus.com](https://webfixus.com), is a Next.js build on Vercel. The earlier GSAP version is public as [webfixus_final](https://github.com/Pranava77/webfixus_final).
+
+</details>
+
+[![Website](https://img.shields.io/badge/webfixus.com-111111?style=flat-square&logo=googlechrome&logoColor=white)](https://webfixus.com) [![LinkedIn](https://img.shields.io/badge/WEBFIXUS-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/company/webfixus) [![Instagram](https://img.shields.io/badge/@webfixus-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/webfixus)
+
+## Before this
+
+Before WEBFIXUS I worked in analytics: [credit risk](https://github.com/Pranava77/Banking-credit-risk-analytics), [customer segmentation](https://github.com/Pranava77/Customer-Segmentation-for-one-of-the-leading-credit-card-company) and [spend drivers](https://github.com/Pranava77/Credit-Card-Spend-Identifying-the-key-drivers-of-card-spend-). It's why I'd rather a pipeline be boring than clever.
 
 ---
 

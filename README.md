@@ -132,19 +132,6 @@ A native macOS app that turns the notch, or a drawn one on any display, into a c
 
 ---
 
-## The guardrails, side by side
-
-| | Rudra OS | SilverSync | Xotch |
-|---|---|---|---|
-| **Tools** | 26 | 18 | 20 |
-| **What needs a person** | High-risk actions, approved with their exact arguments | Every write: it becomes a pending action | Anything that shares or changes your data |
-| **Loop limit** | Steps, runtime, tool calls and cost | Final step offers no tools | 5 rounds; no tools on the last |
-| **Without a model** | The deterministic half runs fully | Everything but the AI; search falls back to an offline embedder | Everything but the chat |
-| **Models** | Any OpenAI-compatible | Gemini, behind provider-neutral types | Claude, OpenAI-compatible, Gemini, Ollama, LM Studio |
-| **Data stays** | On your machine, loopback only | In the home's own database | On your Mac unless you chose a cloud model |
-
----
-
 ## Now building
 
 <table>
@@ -166,19 +153,6 @@ A native macOS app that turns the notch, or a drawn one on any display, into a c
 </td>
 </tr>
 </table>
-
----
-
-## Under the hood
-
-Labs I built to understand the pieces an agent stands on, rather than just calling them. Each one says plainly which parts are real computation and which are simulated.
-
-| Lab | What's real in it |
-|---|---|
-| Prompt Studio | Prompt linting, few-shot and chain-of-thought comparisons, and a prompt-injection scanner |
-| Tokenizer Studio | BPE and WordPiece trained step by step; WordPiece, byte-level BPE, SentencePiece and tiktoken compared on the same text |
-| Embeddings · Transformer · AutoEncoder | GloVe written from scratch in NumPy beside Word2Vec and FastText, a transformer block traced op by op with tensor shapes, PyTorch autoencoders |
-| QLoRA & Evaluation | NF4 / INT4 quantization, LoRA adapters on a toy network, ROUGE / BLEU / token F1 |
 
 ---
 

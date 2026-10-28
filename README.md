@@ -53,44 +53,6 @@ code:     Python · TypeScript · Swift
 
 Click a project to read how it works.
 
-### [Rudra OS](https://github.com/Pranava77/rudra-os): a local-first personal OS with a bounded agent runtime
-
-`Python 3.12` · `FastAPI` · `SQLite + FTS5` · `Pydantic` · `MCP` · `TypeScript` · MIT
-
-Goals, tasks, commitments, decisions, ideas, reading and memory in **one SQLite file on your own machine**, built to answer one question well: *given everything relevant about me, what matters right now, why, and what should I do next?*
-
-<details>
-<summary><b>How it works</b></summary>
-<br>
-
-```
-$ rudra today
-
-PRACTICAL
-Today — 110 of 240 minutes
-  Answer the vendor email
-      why: scores 3.60 — a deadline is close (1.20); someone is expecting
-           it (1.10); small enough to finish (0.50)
-```
-
-**The agent runtime**
-- Every run is bounded in steps, runtime, tool calls and cost.
-- 26 tools. Any high-risk action waits for an approval tied to its exact arguments.
-- Terminal, local API, a 40-screen desktop Control Center, Telegram and an MCP bridge into your editor all go through **one request layer with 122 typed request kinds**, so no surface can act differently from another.
-- The phone deliberately leaves out ten of the thirty write actions: the ones that would weaken a control, or need input a thumb can't give. `/help` says which and why.
-
-**What it refuses to do**
-- It can't send email, messages or posts. Drafts are written, checked and never sent.
-- Nothing leaves the machine. The API binds to loopback only, and an invariant check names every module allowed to open a socket.
-- A reminder with no stated time fails loudly instead of guessing one.
-- What you capture is never rewritten. Refining an idea creates a child and keeps the parent.
-
-**Scale:** about 39,700 lines of Python and 5,300 of TypeScript, 67 tables, 21 reversible migrations, 11 automations, checked with `ruff`, `mypy --strict` and eleven architectural invariants. Its [AS_BUILT record](https://github.com/Pranava77/rudra-os/blob/main/docs/AS_BUILT.md) lists what isn't built as plainly as what is.
-
-</details>
-
----
-
 ### [SilverSync](https://github.com/Pranava77/SilverSync): a care-home operations app with a human-in-the-loop agent
 
 `React 18` · `TypeScript` · `FastAPI` · `SQLAlchemy 2` · `Gemini` · `ChromaDB`
@@ -133,11 +95,37 @@ sequenceDiagram
 
 ---
 
+### [Xotch](https://github.com/Pranava77/Xotch): an AI in the MacBook notch that acts only after you click Allow
+
+`Swift 6` · `SwiftUI` · `AppKit` · on-device speech · private beta
+
+A native macOS app that turns the notch, or a drawn one on any display, into a control surface for the things you do fifty times a day.
+
+<details>
+<summary><b>How it works</b> (screenshot inside)</summary>
+<br>
+
+<img src="https://raw.githubusercontent.com/Pranava77/Xotch/main/docs/images/hero.jpg" alt="Xotch open at the top of a Mac screen, showing the song playing, the next meeting, a focus timer, to-dos and Claude Code status" width="100%">
+
+**The agent**
+- Chat with Claude, GPT, Gemini or a local model through Ollama or LM Studio, from any app with <kbd>⌘⇧Space</kbd>.
+- **20 notch tools** over your calendar, to-dos, timer and notes, with one streaming backend per provider that rebuilds tool calls arriving in pieces.
+- Each tool is typed `look`, `share` or `change`. Looking runs at once. Sharing your clipboard or notes, or changing anything, waits on an **Allow** card, and most changes can be undone from that card.
+- At most five tool rounds per answer. A model that refuses tools is asked again without them, and that's remembered.
+
+**Dictation that never leaves the Mac:** hold <kbd>Fn</kbd>, speak, let go, and the text appears where you're typing. Five seconds of speech is transcribed in about 30 ms, in a separate helper process. Your voice is never saved or sent.
+
+**Built small:** about 23,500 lines of Swift 6 with strict concurrency and no third-party Swift packages. A closed notch measures about 0.3% CPU and 29 MB of memory, with every number in the docs measured, not estimated. It has no account, analytics or telemetry, and API keys live in the Keychain. Start with its [engineering notes](https://github.com/Pranava77/Xotch/blob/main/docs/ENGINEERING.md).
+
+</details>
+
+---
+
 ### More projects
 
 | Project | What it is | Stack |
 |---|---|---|
-| **[Xotch](https://github.com/Pranava77/Xotch)** | An AI in the MacBook notch with 20 typed tools. Looking runs at once; anything that shares or changes waits for an **Allow** click. On-device dictation. | Swift 6, SwiftUI, AppKit |
+| **Rudra OS** <sub>(private repo)</sub> | A local-first personal OS in one SQLite file, with a bounded agent runtime: 26 tools, every run capped in steps, time, calls and cost, and high-risk actions approved with their exact arguments. It can't send messages on your behalf. | Python, FastAPI, SQLite, Pydantic, MCP |
 | **[Syncner](https://github.com/Pranava77/syncner-test)** | A learning platform with a Gemini career mentor and separate student, staff and admin surfaces. | React, TypeScript, Redux, Express, MongoDB |
 | **[Multi-Agent Planning Studio](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio)** | A supervisor turns a request into a task graph for specialist agents and an adversarial reviewer, with replanning on failure. No LLM is called, so the orchestration itself is what's on show. | Python, FastAPI, SQLite |
 | **[Advanced RAG Studio](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project)** | Query rewriting, hybrid FAISS + BM25 retrieval, cross-encoder re-ranking and cited answers, with a trace of every stage. The answer step is templated, not an LLM. | Python, FastAPI, FAISS, BM25 |

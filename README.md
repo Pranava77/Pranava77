@@ -2,11 +2,12 @@
 
 <h1>Pranava Holla</h1>
 
-<p><b>Agentic AI engineer</b> &nbsp;·&nbsp; founder of <a href="https://webfixus.com">WEBFIXUS</a> &nbsp;·&nbsp; Bangalore, India</p>
+<p><b>Agentic AI engineer</b> &nbsp;·&nbsp; co-founder of <a href="https://webfixus.com">WEBFIXUS</a> &nbsp;·&nbsp; Bangalore, India</p>
 
 <p><i>"An agent is only as trustworthy as its boundary: the tools it gets,<br>what needs a person's approval, and what still works when the model doesn't."</i></p>
 
 <p>
+  <a href="https://www.linkedin.com/in/pranava-holla/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="mailto:pranavarholla@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
   <a href="https://webfixus.com"><img src="https://img.shields.io/badge/webfixus.com-4F46E5?style=flat-square&logo=googlechrome&logoColor=white" alt="webfixus.com"></a>
   <a href="#project-showcase"><img src="https://img.shields.io/badge/Project_showcase-10B981?style=flat-square&logo=github&logoColor=white" alt="Project showcase"></a>
@@ -24,7 +25,7 @@
 
 I build agents that take real actions: they write records, change calendars, draft reports and run on people's own machines. Most of the work isn't the prompt. It's the boundary around the agent: which tools it gets, which calls need a person's approval, how many steps it may take, what it costs, and what still works when the model is wrong, slow, or missing.
 
-Three of those systems are below, along with the labs I built to understand what they stand on. I also run WEBFIXUS, a small studio that ships client sites.
+Three of those systems are below, along with the labs I built to understand what they stand on. I also co-founded WEBFIXUS, a small studio that ships client sites.
 
 </td>
 <td width="42%" valign="top">
@@ -302,7 +303,7 @@ Labs I built to understand the pieces an agent stands on, rather than just calli
 
 ## WEBFIXUS
 
-I founded **[WEBFIXUS](https://webfixus.com)** in Bangalore in 2022. It's a small studio built on one idea: good digital work shouldn't need a 50-person agency. AI is how a small team keeps up, both inside our own workflow and in what we build for clients.
+I co-founded **[WEBFIXUS](https://webfixus.com)** in Bangalore in 2022. It's a small studio built on one idea: good digital work shouldn't need a 50-person agency. AI is how a small team keeps up, both inside our own workflow and in what we build for clients.
 
 It's also where the agent work meets real clients. The habits in the showcase above (scoped tools, typed outputs, a human on anything that matters) are how we approach the AI integration work too.
 
@@ -356,6 +357,6 @@ Before WEBFIXUS I worked in analytics: [credit risk](https://github.com/Pranava7
 
 **Building agents that need to be trusted? Let's talk.**
 
-[Email](mailto:pranavarholla@gmail.com) · [WEBFIXUS](https://webfixus.com) · [GitHub](https://github.com/Pranava77)
+[LinkedIn](https://www.linkedin.com/in/pranava-holla/) · [Email](mailto:pranavarholla@gmail.com) · [WEBFIXUS](https://webfixus.com) · [GitHub](https://github.com/Pranava77)
 
 </div>

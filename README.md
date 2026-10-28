@@ -1,20 +1,20 @@
 <div align="center">
 
-# Pranava Holla
+<h1>Pranava Holla</h1>
 
-### Agentic AI engineer
+<p><b>Agentic AI engineer</b> &nbsp;·&nbsp; founder of <a href="https://webfixus.com">WEBFIXUS</a> &nbsp;·&nbsp; Bangalore, India</p>
 
-Bangalore, India · founder of [WEBFIXUS](https://webfixus.com)
+<p><i>"An agent is only as trustworthy as its boundary: the tools it gets,<br>what needs a person's approval, and what still works when the model doesn't."</i></p>
 
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pranavarholla@gmail.com)
-[![Website](https://img.shields.io/badge/webfixus.com-111111?style=for-the-badge&logo=googlechrome&logoColor=white)](https://webfixus.com)
-[![Location](https://img.shields.io/badge/Bangalore-10b981?style=for-the-badge&logo=googlemaps&logoColor=white)](#)
-
-> *An agent is only as trustworthy as its boundary: the tools it gets, what needs a person's approval, and what still works when the model doesn't.*
+<p>
+  <a href="mailto:pranavarholla@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://webfixus.com"><img src="https://img.shields.io/badge/webfixus.com-4F46E5?style=flat-square&logo=googlechrome&logoColor=white" alt="webfixus.com"></a>
+  <a href="#project-showcase"><img src="https://img.shields.io/badge/Project_showcase-10B981?style=flat-square&logo=github&logoColor=white" alt="Project showcase"></a>
+</p>
 
 </div>
 
----
+<br>
 
 <table>
 <tr>

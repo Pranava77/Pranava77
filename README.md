@@ -25,7 +25,7 @@
 
 I build agents that take real actions: they write records, change calendars, draft reports and run on people's own machines. Most of the work isn't the prompt. It's the boundary around the agent: which tools it gets, which calls need a person's approval, how many steps it may take, what it costs, and what still works when the model is wrong, slow, or missing.
 
-Three of those systems are below, along with the labs I built to understand what they stand on. I also co-founded WEBFIXUS, a small studio that ships client sites.
+Two of those systems are below in depth, with the rest, including the labs I built to understand what they stand on, in a table after them. I also co-founded WEBFIXUS, a small studio that ships client sites.
 
 </td>
 <td width="42%" valign="top">
@@ -133,90 +133,14 @@ sequenceDiagram
 
 ---
 
-### [Xotch](https://github.com/Pranava77/Xotch): an AI in the MacBook notch that acts only after you click Allow
+### More projects
 
-`Swift 6` · `SwiftUI` · `AppKit` · on-device speech · private beta
-
-A native macOS app that turns the notch, or a drawn one on any display, into a control surface for the things you do fifty times a day.
-
-<details>
-<summary><b>How it works</b> (screenshot inside)</summary>
-<br>
-
-<img src="https://raw.githubusercontent.com/Pranava77/Xotch/main/docs/images/hero.jpg" alt="Xotch open at the top of a Mac screen, showing the song playing, the next meeting, a focus timer, to-dos and Claude Code status" width="100%">
-
-**The agent**
-- Chat with Claude, GPT, Gemini or a local model through Ollama or LM Studio, from any app with <kbd>⌘⇧Space</kbd>.
-- **20 notch tools** over your calendar, to-dos, timer and notes, with one streaming backend per provider that rebuilds tool calls arriving in pieces.
-- Each tool is typed `look`, `share` or `change`. Looking runs at once. Sharing your clipboard or notes, or changing anything, waits on an **Allow** card, and most changes can be undone from that card.
-- At most five tool rounds per answer. A model that refuses tools is asked again without them, and that's remembered.
-
-**Dictation that never leaves the Mac:** hold <kbd>Fn</kbd>, speak, let go, and the text appears where you're typing. Five seconds of speech is transcribed in about 30 ms, in a separate helper process. Your voice is never saved or sent.
-
-**Built small:** about 23,500 lines of Swift 6 with strict concurrency and no third-party Swift packages. A closed notch measures about 0.3% CPU and 29 MB of memory, with every number in the docs measured, not estimated. It has no account, analytics or telemetry, and API keys live in the Keychain. Start with its [engineering notes](https://github.com/Pranava77/Xotch/blob/main/docs/ENGINEERING.md).
-
-</details>
-
----
-
-### [Syncner](https://github.com/Pranava77/syncner-test): a learning platform with a Gemini career mentor
-
-`React` · `TypeScript` · `Redux` · `Express` · `MongoDB`
-
-Structured learning paths, progress tracking and generated student portfolios, across separate student, staff and admin surfaces.
-
-<details>
-<summary><b>How it works</b></summary>
-<br>
-
-- **The mentor:** a Gemini-backed career mentor that students talk to alongside their learning paths.
-- **The API:** Express and MongoDB, with JWT auth, request validation, rate limiting and scheduled jobs.
-- **Key handling:** the model key is read from admin settings before the environment, so rotating a key is a settings change rather than a redeploy.
-- **Front end:** React and TypeScript with Redux, with separate student, staff and admin surfaces.
-
-</details>
-
----
-
-### [Multi-Agent Planning Studio](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio): orchestration, shown without a model
-
-`Python` · `FastAPI` · `SQLite`
-
-A lab that makes multi-agent orchestration visible: a supervisor breaks a request into a task graph, specialist agents work through it, and a reviewer argues with the result.
-
-<details>
-<summary><b>How it works</b></summary>
-<br>
-
-- **Supervisor ("Orchestrator-Prime")** decomposes a query into a DAG of subtasks, dispatches them in dependency order, and writes the final report.
-- **Specialist roles:** a data / SQL agent working over a small enterprise SQLite database, a quantitative analyst, and a critical reviewer that fact-checks the others adversarially.
-- **Two orchestration patterns:** supervisor / hierarchical, and a sequential assembly pipeline, with agents sharing a blackboard memory.
-- **Replanning:** when a step fails, the plan is revised and the run recovers instead of stopping.
-- **Honest about what it is:** the agents are plain Python classes and no LLM is called, so what you see is the orchestration itself. There's a web UI and a CLI demo.
-
-</details>
-
----
-
-### [Advanced RAG Studio](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project): retrieval an agent can rely on
-
-`Python` · `FastAPI` · `FAISS` · `BM25` · `sentence-transformers`
-
-A lab for the retrieval half of an agent: rewrite the query, search two ways, re-rank, and answer only from what was found, with a trace of every stage.
-
-<details>
-<summary><b>How it works</b></summary>
-<br>
-
-1. **Query transformation:** multi-query expansion into three phrasings, a HyDE synthetic passage, and sub-query decomposition.
-2. **Hybrid retrieval:** FAISS dense search over 384-dimensional embeddings plus BM25 keyword search, fused with reciprocal rank fusion (k = 60).
-3. **Re-ranking:** an MS MARCO cross-encoder re-scores the candidates, and the UI shows how far each one moved.
-4. **Grounded answers:** each answer cites its sources as `[Source N]`, with a side-by-side view of what an ungrounded answer gets wrong.
-5. **Evaluation:** RAG-triad scoring and a naive-vs-advanced benchmark.
-
-You can upload your own `.md` or `.txt` files and they're re-indexed immediately. Retrieval and re-ranking use real models; the answer step is templated per domain rather than an LLM, so the retrieval quality is what's on show.
-
-</details>
+| Project | What it is | Stack |
+|---|---|---|
+| **[Xotch](https://github.com/Pranava77/Xotch)** | An AI in the MacBook notch with 20 typed tools. Looking runs at once; anything that shares or changes waits for an **Allow** click. On-device dictation. | Swift 6, SwiftUI, AppKit |
+| **[Syncner](https://github.com/Pranava77/syncner-test)** | A learning platform with a Gemini career mentor and separate student, staff and admin surfaces. | React, TypeScript, Redux, Express, MongoDB |
+| **[Multi-Agent Planning Studio](https://github.com/Pranava77/Multi_Agent_Planning_Orchestration_Studio)** | A supervisor turns a request into a task graph for specialist agents and an adversarial reviewer, with replanning on failure. No LLM is called, so the orchestration itself is what's on show. | Python, FastAPI, SQLite |
+| **[Advanced RAG Studio](https://github.com/Pranava77/Advanced_RAG_Pipelines_Studio_Live_Project)** | Query rewriting, hybrid FAISS + BM25 retrieval, cross-encoder re-ranking and cited answers, with a trace of every stage. The answer step is templated, not an LLM. | Python, FastAPI, FAISS, BM25 |
 
 ---
 

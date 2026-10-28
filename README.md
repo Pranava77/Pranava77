@@ -347,6 +347,14 @@ The studio's own site, [webfixus.com](https://webfixus.com), is a Next.js build 
 
 [![Website](https://img.shields.io/badge/webfixus.com-111111?style=flat-square&logo=googlechrome&logoColor=white)](https://webfixus.com) [![LinkedIn](https://img.shields.io/badge/WEBFIXUS-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/company/webfixus) [![Instagram](https://img.shields.io/badge/@webfixus-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/webfixus)
 
+## Education & certifications
+
+| Programme | Institution | Year |
+|---|---|---|
+| **Fellowship in Software Development, FullStack AI** | Crio.Do | 2025 |
+| **Advanced Certification, Data Science and AI** | Indian Institute of Technology, Madras | 2020 – 2021 |
+| **B.E., Electrical, Electronics and Communications Engineering** | Visvesvaraya Technological University | 2014 – 2018 |
+
 ## Before this
 
 Before WEBFIXUS I worked in analytics: [credit risk](https://github.com/Pranava77/Banking-credit-risk-analytics), [customer segmentation](https://github.com/Pranava77/Customer-Segmentation-for-one-of-the-leading-credit-card-company) and [spend drivers](https://github.com/Pranava77/Credit-Card-Spend-Identifying-the-key-drivers-of-card-spend-). It's why I'd rather a pipeline be boring than clever.

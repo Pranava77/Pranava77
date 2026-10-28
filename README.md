@@ -220,20 +220,6 @@ You can upload your own `.md` or `.txt` files and they're re-indexed immediately
 
 ---
 
-## How I build agents
-
-The same rules show up in every project, so here they are once, with where each one lives.
-
-1. **Permission is part of the tool's type, not a prompt instruction.** In Xotch every tool is `look`, `share` or `change`, and only `look` runs without an Allow card. In SilverSync the three tools that change data can't write at all; they create a pending action.
-2. **The loop belongs to me, not the SDK.** SilverSync runs its own tool loop instead of automatic function calling, so permission checks, streaming, auditing and confirmation stay in code I can read. Xotch caps the loop at five rounds and offers no tools on the last one, so the model has to answer.
-3. **Approvals are bound to exact arguments.** In Rudra OS, an approval covers that one call with those arguments and nothing else, and you can give it from any surface, including a phone.
-4. **Deterministic first, model last.** Briefings, priorities, alerts and calculations run with no model call. A model gets only the step that actually needs judgement, and each product works with no key configured.
-5. **Remove a capability rather than guard it.** Rudra OS can't send a message on your behalf, and its `run_code` tool was deleted rather than gated: the agent writes the file it would ask to run, so "may I run this?" isn't a question you can usefully answer.
-6. **Untrusted input is marked, not trusted.** Fetched content is stored `UNVERIFIED` and reaches the model inside a quotation fence, with instruction-shaped spans stripped and counted.
-7. **The provider is swappable.** Rudra OS, SilverSync and Xotch each talk to models through their own provider-neutral types or adapters, so changing models is configuration, not a rewrite.
-
----
-
 ## The guardrails, side by side
 
 | | Rudra OS | SilverSync | Xotch |
